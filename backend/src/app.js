@@ -21,6 +21,13 @@ const { swaggerUi, swaggerDocument } = require("./config/swagger");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Root route working",
+  });
+});
+
 app.get("/favicon.ico", (req, res) => res.status(204).end());
 
 app.use(express.json());
