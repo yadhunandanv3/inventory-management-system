@@ -1,0 +1,38 @@
+openapi: 3.0.0
+
+info:
+  title: Inventory Management API
+  version: 1.0.0
+  description: Inventory Management System Backend
+
+servers:
+  - url: http://localhost:5000
+
+paths:
+  /api/health:
+    get:
+      summary: Health Check
+      responses:
+        "200":
+          description: API Running
+
+  /api/auth/register:
+    post:
+      summary: Register User
+      responses:
+        "201":
+          description: User Registered
+
+  /api/auth/login:
+    post:
+      summary: Login User
+      responses:
+        "200":
+          description: Login Successful
+
+  /api/users/profile:
+    get:
+      summary: Get User Profile
+      responses:
+        "200":
+          description: User Profile Retrieved
